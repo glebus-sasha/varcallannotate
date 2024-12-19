@@ -24,6 +24,7 @@ workflow {
     QC_TRIM(
         input_fastqs
     )
+    QC_TRIM.out.trimmed_reads.view()
         ALIGN_VARCALL(
         reference,
         QC_TRIM.out.trimmed_reads,
