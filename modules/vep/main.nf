@@ -12,8 +12,6 @@ process VEP {
     tuple val(sid), path(vcf)
     path vep_cache
     path reference
-    path clinvar_gz
-    path clinvar_tbi
 
     output:
     path "${sid}.vep", emit: vep
@@ -30,7 +28,6 @@ process VEP {
     --dir_cache ${vep_cache} \
     --everything \
     --species homo_sapiens \
-    --custom file=${clinvar_gz},short_name=ClinVar,format=vcf,type=exact,coords=0,fields=CLNSIG%CLNREVSTAT%CLNDN \
     --offline \
     --vcf \
     --assembly GRCh38
