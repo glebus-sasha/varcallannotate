@@ -14,10 +14,10 @@ workflow ALIGN_VARCALL {
     faidx
 
     main:
-    BWA_MEM.out.bam.join(SAMTOOLS_INDEX.out.bai).view()
     BWA_MEM(trimmed_reads, reference, bwaidx)
     SAMTOOLS_FLAGSTAT(BWA_MEM.out.bam)
     SAMTOOLS_INDEX(BWA_MEM.out.bam)
+    BWA_MEM.out.bam.join(SAMTOOLS_INDEX.out.bai).view()
     DEEPVARIANT(reference, BWA_MEM.out.bam.join(SAMTOOLS_INDEX.out.bai), faidx)
     BCFTOOLS_INDEX(DEEPVARIANT.out.vcf)
     BCFTOOLS_STATS(DEEPVARIANT.out.vcf, '')
