@@ -116,3 +116,23 @@ memory: '100'
 nextflow run -latest glebus-sasha/varcallannotate -profile apptainer,test -params-file params.yaml
 ```
 
+Running varcallannotate in GUI
+
+```
+sudo apt install python3-flask
+sudo apt install python3-flask-socketio
+python3 /home/gene/.nextflow/assets/glebus-sasha/varcallannotate/server.py
+nano path_config.py
+```
+
+```path_config.py
+READS_FOLDER    = "<path/to/tmp/folder/reads>"
+OUTPUT_FOLDER   = "<path/to/output>"
+nextflow_path   = "<path/to/metagenome_nf>"
+
+nextflow_command = ["nextflow", "run",
+ "glebus-sasha/varcallannotate", "-profile", "singularity,sesana",
+    "--reads", READS_FOLDER,
+    "--outdir", OUTPUT_FOLDER,
+    "--reports"]
+```

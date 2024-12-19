@@ -13,7 +13,7 @@ from threading import Thread
 config_path = '/app' 
 sys.path.append(config_path)
 
-from path_config import READS_FOLDER, OUTPUT_FOLDER, nextflow_path, nextflow_command, kraken2_db, GTDB_db
+from path_config import *
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -89,9 +89,9 @@ def index():
             .no-underline { text-decoration: none; color: white; }
             .no-underline:hover, .no-underline:active, .no-underline:visited { color: white; }
         </style>
-        <h1>Metagenome NF</h1>
-        <div id="version-number">Версия 2.0
-            <p><a href="https://docs.google.com/document/d/1wzGcBp868aPvKoOo0Jx8Z-lDEg5iVLzQVS-VXZIbthA/edit?tab=t.0#heading=h.4ikn9g84g3gq" target="_blank" class="no-underline">❔ Справка</a></p>
+        <h1>varcallannotate</h1>
+        <div id="version-number">Версия dev
+            <p><a href="https://docs.google.com/document/d/11jPyh1NyD_TsrZC6RyAPUcdcDu9lFdHw2Kj4nD7wyvw/edit?tab=t.0#heading=h.4ikn9g84g3gq" target="_blank" class="no-underline">❔ Справка</a></p>
         </div>
         <div class="container">
             
