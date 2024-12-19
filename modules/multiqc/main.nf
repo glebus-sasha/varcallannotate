@@ -8,11 +8,10 @@ process MULTIQC {
 	
     input:
     path fastp
-    path fastqc1
-    path fastqc2
+    path fastqc_before
+    path fastqc_after
     path flagstat
-    path bcfstats1
-    path bcfstats2
+    path bcfstats
 
     output:
     path '*.html', emit: html

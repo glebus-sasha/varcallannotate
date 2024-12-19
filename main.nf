@@ -28,16 +28,24 @@ workflow {
     QC_TRIM(
         input_fastqs
     )
-        ALIGN_VARCALL(
+    ALIGN_VARCALL(
         reference,
         QC_TRIM.out.trimmed_reads,
         bwaidx,
         faidx
     )
-    VEP(ALIGN_VARCALL.out.vcf,
+    VEP(
+        ALIGN_VARCALL.out.vcf,
         vep_cache,
-        reference)
-
+        reference
+    )
+    MULTIQC(
+        QC_TRIM.out.fastp,
+        QC_TRIM.out.fastqc_before,
+        QC_TRIM.out.fastqc_after,
+        ALIGN_VARCALL.out.flagstat,
+        ALIGN_VARCALL.out.bcfstats
+    )
 }
 
 
