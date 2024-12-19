@@ -1,6 +1,6 @@
 // Define the `BCFTOOLS_INDEX` process that performs vcf statistics
 process BCFTOOLS_INDEX {
-    container = 'staphb/bcftools:latest'
+    container 'staphb/bcftools:latest'
     tag { 
         sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
     }
