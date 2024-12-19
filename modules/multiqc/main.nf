@@ -18,6 +18,6 @@ process MULTIQC {
 
     script:
     """
-    multiqc $fastqc1 $fastqc2 $fastp $flagstat $bcfstats1 $bcfstats2
+    multiqc $fastp $fastqc_before $fastqc_after $flagstat $bcfstats
     """
 }
