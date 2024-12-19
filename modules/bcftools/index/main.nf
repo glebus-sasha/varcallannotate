@@ -14,7 +14,7 @@ process BCFTOOLS_INDEX {
     tuple val(sid), path(vcf)
 
     output:
-    path "${sid}.bcf.csi",      emit: index
+    path "${sid}.*.csi",      emit: index
     
     script:
     """
