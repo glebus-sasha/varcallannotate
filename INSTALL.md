@@ -121,7 +121,6 @@ Running varcallannotate in GUI
 ```
 sudo apt install python3-flask
 sudo apt install python3-flask-socketio
-python3 /home/gene/.nextflow/assets/glebus-sasha/varcallannotate/server.py
 nano path_config.py
 ```
 
@@ -131,8 +130,12 @@ OUTPUT_FOLDER   = "<path/to/output>"
 nextflow_path   = "<path/to/metagenome_nf>"
 
 nextflow_command = ["nextflow", "run",
- "glebus-sasha/varcallannotate", "-profile", "singularity,sesana",
+ "glebus-sasha/varcallannotate", "-profile", "singularity",
     "--reads", READS_FOLDER,
     "--outdir", OUTPUT_FOLDER,
     "--reports"]
+```
+
+```
+python3 /home/gene/.nextflow/assets/glebus-sasha/varcallannotate/server.py
 ```
