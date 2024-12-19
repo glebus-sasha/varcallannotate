@@ -137,5 +137,5 @@ nextflow_command = ["nextflow", "run",
 ```
 
 ```
-python3 /home/gene/.nextflow/assets/glebus-sasha/varcallannotate/server.py
+python3 /home/gene/.nextflow/assets/glebus-sasha/varcallannotate/server.py <path/to/config.py>
 ```
