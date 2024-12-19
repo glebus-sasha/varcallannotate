@@ -83,5 +83,28 @@ sudo make install
 apptainer --version
 ```
 
+Launch pipeline in CL
 
+```
+mkdir varcallimputblup
+cd varcallimputblup
+touch params.yaml
+```
+
+```params.yaml                                                              
+reference: ''
+faidx: ''
+bwaidx: ''
+reads: ''
+panel: ''
+chunks: ''
+outdir: ''
+reports: true
+cpus: '64'
+memory: '100'
+```
+
+```
+nextflow run -latest glebus-sasha/varcallannotate -profile apptainer,test 
+```
 
