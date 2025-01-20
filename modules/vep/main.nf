@@ -3,7 +3,9 @@ process VEP {
     container 'ensemblorg/ensembl-vep:latest'
     conda 'vep'
 //    containerOptions "-B ${params.vepcache}:/opt/vep/.vep"
-    tag "$vcf"
+    tag { 
+        sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
+    }
     publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/VEP"
 //    debug true
 //    cache "lenient"

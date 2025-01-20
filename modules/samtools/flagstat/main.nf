@@ -2,7 +2,9 @@
 process SAMTOOLS_FLAGSTAT {
     container 'glebusasha/bwa_samtools'
     conda 'bioconda::bwa bioconda::samtools'
-    tag ""
+    tag { 
+        sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
+    }
     publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/SAMTOOLS_FLAGSTAT"
 //	  debug true
 //    errorStrategy 'ignore'

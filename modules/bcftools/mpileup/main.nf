@@ -2,7 +2,9 @@
 process BCFTOOLS_MPILEUP {
     container 'staphb/bcftools:latest'
     conda 'bcftools'
-    tag "$reference $bamFile"
+    tag { 
+        sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
+    }
 //    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/BCFTOOLS_MPILEUP"
 //	debug true
 //  errorStrategy 'ignore'
