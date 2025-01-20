@@ -4,7 +4,7 @@ process DEEPVARIANT {
     conda 'bioconda::deepvariant'
     tag "$bamFile"
     publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/DEEPVARIANT"
-//    cache "lenient" 
+    cpus 10
 //    debug true
 //    errorStrategy 'ignore'
 	
@@ -27,6 +27,6 @@ process DEEPVARIANT {
     --reads=$bamFile \
     --output_vcf=${sid}.vcf.gz \
     --output_gvcf=${sid}.g.vcf.gz \
-    --num_shards=1
+    --num_shards=${task.cpus}
     """
 }

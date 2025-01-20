@@ -5,7 +5,7 @@ process FASTQC {
     tag { 
         sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
     }
-//    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/FASTQC", pattern: '*.html'
+    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/FASTQC", pattern: '*.html'
 //	debug true
 //  errorStrategy 'ignore'
 
