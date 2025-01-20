@@ -125,14 +125,15 @@ nano path_config.py
 ```
 
 ```path_config.py
-READS_FOLDER    = "<path/to/tmp/folder/reads>"
-OUTPUT_FOLDER   = "<path/to/output>"
-nextflow_path   = "<path/to/varcallannotate>"
+READS_FOLDER    = "/storage/aglebus/tmp_reads"
+OUTPUT_FOLDER   = "/storage/aglebus/tmp_output"
+nextflow_path   = "/storage/aglebus/varcallannotate"
 
 nextflow_command = ["nextflow", "run",
  "glebus-sasha/varcallannotate", "-profile", "singularity",
     "--reads", READS_FOLDER,
     "--outdir", OUTPUT_FOLDER,
+    "-params-file", "params.yml",
     "--reports"]
 ```
 
