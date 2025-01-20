@@ -56,6 +56,7 @@ workflow.onComplete {
 
     println "Обработка завершена: ${workflow.complete.format('yyyy-MM-dd_HH-mm-ss')}"
     println "Статус выполнения: ${workflow.success ? 'OK' : 'ошибка'}"
+    println "Время выполнения: ${executionTime.format('yyyy-MM-dd_HH-mm-ss')} ms"
     println "Результаты находятся в: $resultsDir"
     println "Технические характеристики находятся в: $pipelineInfoDir"
 }
