@@ -50,5 +50,14 @@ workflow {
     )
 }
 
+workflow.onComplete {
+    def resultsDir = "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}"
+    def pipelineInfoDir = "${params.outdir}/pipeline_info"
+
+    println "Обработка завершена: ${workflow.complete.format('yyyy-MM-dd_HH-mm-ss')}"
+    println "Статус выполнения: ${workflow.success ? 'OK' : 'ошибка'}"
+    println "Результаты находятся в: $resultsDir"
+    println "Технические характеристики находятся в: $pipelineInfoDir"
+}
 
 
