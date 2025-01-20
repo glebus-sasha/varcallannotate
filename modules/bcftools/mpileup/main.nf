@@ -5,7 +5,7 @@ process BCFTOOLS_MPILEUP {
     tag { 
         sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
     }
-//    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/BCFTOOLS_MPILEUP"
+//    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${params.launch_name}/BCFTOOLS_MPILEUP"
 //	debug true
 //  errorStrategy 'ignore'
 	

@@ -3,7 +3,7 @@ process MULTIQC {
     container 'staphb/multiqc:latest'
     conda "${moduleDir}/environment.yml"
     tag ""
-    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}"
+    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${params.launch_name}"
 //	  debug true
 //    errorStrategy 'ignore'
 	

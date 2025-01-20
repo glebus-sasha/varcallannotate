@@ -5,7 +5,7 @@ process SAMTOOLS_INDEX {
     tag { 
         sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
     }
-//   publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/SAMTOOLS_INDEX"
+//   publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${params.launch_name}/SAMTOOLS_INDEX"
 //	  debug true
 //    errorStrategy 'ignore'
     input:

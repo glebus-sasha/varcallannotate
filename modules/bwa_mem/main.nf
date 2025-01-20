@@ -6,7 +6,7 @@ process BWA_MEM {
         sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
     }
     cpus 10
-    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/BWA_MEM"
+    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${params.launch_name}/BWA_MEM"
 //	  debug true
 //    errorStrategy 'ignore'
 
