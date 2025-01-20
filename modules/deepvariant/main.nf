@@ -2,7 +2,9 @@
 process DEEPVARIANT {
     container 'google/deepvariant:1.6.1'
     conda 'bioconda::deepvariant'
-    tag "$bamFile"
+    tag { 
+        sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
+    }
     publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/DEEPVARIANT"
     cpus 10
 //    debug true
