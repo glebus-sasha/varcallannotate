@@ -1,6 +1,7 @@
 // Define the `VEP` process that performs annotation
 process VEP {
-    container = 'ensemblorg/ensembl-vep:latest'
+    container 'ensemblorg/ensembl-vep:latest'
+    conda 'vep'
 //    containerOptions "-B ${params.vepcache}:/opt/vep/.vep"
     tag "$vcf"
     publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/VEP"
@@ -14,8 +15,8 @@ process VEP {
     path reference
 
     output:
-    path "${sid}.vep", emit: vep
-    path "${sid}.vep.html", emit: html
+    path "${sid}.vep"       , emit: vep
+    path "${sid}.vep.html"  , emit: html
 
     script:
     """

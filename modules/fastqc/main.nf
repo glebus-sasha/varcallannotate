@@ -1,6 +1,7 @@
 // Define the `FASTQC` process that performs quality trimming and filtering of reads
 process FASTQC {
-    container = 'staphb/fastqc:0.12.1'
+    container 'staphb/fastqc:0.12.1'
+    conda 'fastqc'
     tag { 
         sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
     }

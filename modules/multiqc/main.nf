@@ -1,23 +1,20 @@
 // Define the `MULTIQC` process that performs report
 process MULTIQC {
-    container = 'staphb/multiqc:latest'
+    container 'staphb/multiqc:latest'
+    conda "${moduleDir}/environment.yml"
     tag ""
-    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/MULTIQC"
+    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}"
 //	  debug true
 //    errorStrategy 'ignore'
 	
     input:
-    path fastp
-    path fastqc_before
-    path fastqc_after
-    path flagstat
-    path bcfstats
+    path files
 
     output:
     path '*.html', emit: html
 
     script:
     """
-    multiqc $fastp $fastqc_before $fastqc_after $flagstat $bcfstats
+    multiqc . -n "summary_report.html"
     """
 }

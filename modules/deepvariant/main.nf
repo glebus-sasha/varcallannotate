@@ -1,6 +1,7 @@
 // Define the `DEEPVARIANT` process that performs variant calling
 process DEEPVARIANT {
-    container = 'google/deepvariant:1.6.1'
+    container 'google/deepvariant:1.6.1'
+    conda 'bioconda::deepvariant'
     tag "$bamFile"
     publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/DEEPVARIANT"
 //    cache "lenient" 

@@ -1,6 +1,7 @@
 // Define the `BCFTOOLS_STATS` process that performs vcf statistics
 process BCFTOOLS_STATS {
-    container = 'staphb/bcftools:latest'
+    container 'staphb/bcftools:latest'
+    conda 'bcftools'
     tag { 
         sid.length() > 40 ? "${sid.take(20)}...${sid.takeRight(20)}" : sid
     }

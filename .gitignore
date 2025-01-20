@@ -3,4 +3,5 @@ work/
 data/
 results/
 null/
-params.yaml
+params.yml
+path_config.py

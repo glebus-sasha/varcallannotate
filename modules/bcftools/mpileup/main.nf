@@ -1,6 +1,7 @@
 // Define the `BCFTOOLS_MPILEUP` process that performs variant calling
 process BCFTOOLS_MPILEUP {
-    container = 'staphb/bcftools:latest'
+    container 'staphb/bcftools:latest'
+    conda 'bcftools'
     tag "$reference $bamFile"
 //    publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${workflow.runName}/BCFTOOLS_MPILEUP"
 //	debug true

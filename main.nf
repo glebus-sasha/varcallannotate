@@ -40,11 +40,13 @@ workflow {
         reference
     )
     MULTIQC(
-        QC_TRIM.out.fastp,
-        QC_TRIM.out.fastqc_before,
-        QC_TRIM.out.fastqc_after,
-        ALIGN_VARCALL.out.flagstat,
-        ALIGN_VARCALL.out.bcfstats
+        QC_TRIM.out.fastp               |
+        mix(QC_TRIM.out.fastqc_before)  |
+        mix(QC_TRIM.out.fastqc_after)   |
+        mix(ALIGN_VARCALL.out.flagstat) |
+        mix(ALIGN_VARCALL.out.bcfstats) |
+        mix(VEP.out.html)               |
+        collect
     )
 }
 
