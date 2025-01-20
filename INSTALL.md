@@ -127,7 +127,7 @@ nano path_config.py
 ```path_config.py
 READS_FOLDER    = "<path/to/tmp/folder/reads>"
 OUTPUT_FOLDER   = "<path/to/output>"
-nextflow_path   = "<path/to/metagenome_nf>"
+nextflow_path   = "<path/to/varcallannotate>"
 
 nextflow_command = ["nextflow", "run",
  "glebus-sasha/varcallannotate", "-profile", "singularity",
