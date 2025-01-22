@@ -131,7 +131,7 @@ nano path_config.py
 ```path_config.py
 READS_FOLDER    = "$HOME/tmp_reads"
 OUTPUT_FOLDER   = "$HOME/tmp_output"
-nextflow_path   = "/storage/aglebus/varcallannotate"
+nextflow_path   = "$HOME/varcallannotate"
 
 nextflow_command = ["nextflow", "run",
  "glebus-sasha/varcallannotate", "-profile", "apptainer",
