@@ -5,3 +5,4 @@ results/
 null/
 params.yml
 path_config.py
+__pycache__
