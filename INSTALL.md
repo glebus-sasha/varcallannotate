@@ -87,6 +87,7 @@ apptainer --version
 Launch pipeline in CL
 
 ```
+cd
 mkdir varcallimputblup
 cd varcallimputblup
 ```
