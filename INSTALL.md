@@ -89,7 +89,6 @@ Launch pipeline in CL
 ```
 mkdir varcallimputblup
 cd varcallimputblup
-touch params.yaml
 ```
 
 Launch varcallannotate test in CL
@@ -99,10 +98,10 @@ nextflow run -latest glebus-sasha/varcallannotate -profile apptainer,test
 
 Launch varcallannotate in CL
 ```
-touch params.yaml
+touch params.yml
 ```
 
-```params.yaml                                                              
+```params.yml                                                              
 reference: ''
 faidx: ''
 bwaidx: ''
