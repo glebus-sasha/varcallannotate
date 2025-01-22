@@ -90,7 +90,7 @@ def index():
             .no-underline:hover, .no-underline:active, .no-underline:visited { color: white; }
         </style>
         <h1>varcallannotate</h1>
-        <div id="version-number">Версия dev
+        <div id="version-number">Версия 1.0
             <p><a href="https://docs.google.com/document/d/11jPyh1NyD_TsrZC6RyAPUcdcDu9lFdHw2Kj4nD7wyvw/edit?tab=t.0#heading=h.4ikn9g84g3gq" target="_blank" class="no-underline">❔ Справка</a></p>
         </div>
         <div class="container">
