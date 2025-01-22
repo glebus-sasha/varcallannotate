@@ -113,7 +113,7 @@ memory: '100'
 ```
 
 ```
-nextflow run -latest glebus-sasha/varcallannotate -profile apptainer -params-file params.yaml
+nextflow run -latest glebus-sasha/varcallannotate -profile apptainer -params-file params.yml
 ```
 
 Running varcallannotate in GUI
