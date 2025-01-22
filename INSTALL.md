@@ -126,8 +126,8 @@ nano path_config.py
 ```
 
 ```path_config.py
-READS_FOLDER    = "/storage/aglebus/tmp_reads"
-OUTPUT_FOLDER   = "/storage/aglebus/tmp_output"
+READS_FOLDER    = "$HOME/tmp_reads"
+OUTPUT_FOLDER   = "$HOME/tmp_output"
 nextflow_path   = "/storage/aglebus/varcallannotate"
 
 nextflow_command = ["nextflow", "run",
