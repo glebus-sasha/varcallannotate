@@ -5,6 +5,7 @@ curl -s https://get.sdkman.io | bash
 ```
 Open a new terminal
 ```
+sdk install java 17.0.10-tem
 java -version
 ```
 
