@@ -123,7 +123,7 @@ Running varcallannotate in GUI
 sudo apt install python3-flask
 sudo apt install python3-flask-socketio
 cd $HOME
-git pull https://github.com/glebus-sasha/varcallannotate.git
+git clone https://github.com/glebus-sasha/varcallannotate.git
 cd varcallannotate
 nano path_config.py
 ```
