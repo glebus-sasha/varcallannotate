@@ -106,6 +106,7 @@ touch params.yml
 reference: ''
 faidx: ''
 bwaidx: ''
+vep_cache: ''
 reads: ''
 outdir: ''
 reports: true
