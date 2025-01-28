@@ -111,3 +111,35 @@ flowchart TB
 - **BCFTOOLS_STATS**: Statistical analysis of variant calls using BCFtools stats.
 - **VEP**: Variant Effect Predictor for annotating variants.
 - **MULTIQC**: Compilation of a comprehensive report including QC metrics, alignment results, and variant calling statistics.
+
+## Usage
+
+### Quick Start
+
+To quickly run the pipeline, use the following command:
+
+```bash
+nextflow run <your-username>/<your-repository> \
+    -profile <docker/singularity> 
+```
+
+### Requirements
+
+- Nextflow (https://www.nextflow.io/docs/latest/install.html)
+- Docker (https://docs.docker.com/engine/install/) or
+- Apptainer (https://apptainer.org)
+
+### Running the Pipeline
+```bash
+nextflow run main.nf
+```
+
+## Contributors
+
+- Oxana Kolpakova ([@OxanaKolpakova](https://github.com/OxanaKolpakova))
+- Glebus Aleksandr ([@glebus-sasha](https://github.com/glebus-sasha/))
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
