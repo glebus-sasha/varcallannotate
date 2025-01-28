@@ -99,25 +99,15 @@ flowchart TB
     v31 --> v37
     v37 --> v38
 ```
-
-FASTQC_BEFORE: Quality control of raw sequencing data using FastQC before trimming.
-
-FASTP: Trimming of reads to remove adapters and low-quality sequences using fastp.
-
-FASTQC_AFTER: Quality control of trimmed sequencing data using FastQC after trimming.
-
-BWA_MEM: Alignment of reads to the reference genome using BWA MEM.
-
-SAMTOOLS_FLAGSTAT: Quality assessment of alignment using SAMtools flagstat.
-
-SAMTOOLS_INDEX: Indexing of BAM files using SAMtools index.
-
-DEEPVARIANT: Variant calling using DeepVariant.
-
-BCFTOOLS_INDEX: Indexing of VCF files using BCFtools index.
-
-BCFTOOLS_STATS: Statistical analysis of variant calls using BCFtools stats.
-
-VEP: Variant Effect Predictor for annotating variants.
-
-MULTIQC: Compilation of a comprehensive report including QC metrics, alignment results, and variant calling statistics.
+## Description
+- **FASTQC_BEFORE**: Quality control of raw sequencing data using FastQC before trimming.
+- **FASTP**: Trimming of reads to remove adapters and low-quality sequences using fastp.
+- **FASTQC_AFTER**: Quality control of trimmed sequencing data using FastQC after trimming.
+- **BWA_MEM**: Alignment of reads to the reference genome using BWA MEM.
+- **SAMTOOLS_FLAGSTAT**: Quality assessment of alignment using SAMtools flagstat.
+- **SAMTOOLS_INDEX**: Indexing of BAM files using SAMtools index.
+- **DEEPVARIANT**: Variant calling using DeepVariant.
+- **BCFTOOLS_INDEX**: Indexing of VCF files using BCFtools index.
+- **BCFTOOLS_STATS**: Statistical analysis of variant calls using BCFtools stats.
+- **VEP**: Variant Effect Predictor for annotating variants.
+- **MULTIQC**: Compilation of a comprehensive report including QC metrics, alignment results, and variant calling statistics.
