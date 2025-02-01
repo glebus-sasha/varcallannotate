@@ -13,7 +13,7 @@ Nextflos pipeline for variat calling and annotation
 
 ```mermaid
 %%{init: {'theme':'base'}}%%
-flowchart TB
+flowchart LR
     subgraph " "
     v0["Channel.fromPath"]
     v2["Channel.fromFilePairs"]
