@@ -24,7 +24,7 @@ workflow ALIGN_VARCALL {
     emit:
     align       = BWA_MEM.out.bam.join(SAMTOOLS_INDEX.out.bai)
     flagstat    = SAMTOOLS_FLAGSTAT.out.flagstat
-    bcfstats   = BCFTOOLS_STATS.out.bcfstats
+    bcfstats    = BCFTOOLS_STATS.out.bcfstats
     vcf         = DEEPVARIANT.out.vcf
     
 }
