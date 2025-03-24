@@ -7,7 +7,7 @@ process ON_TARGET_RATIO {
     }
     publishDir "${params.outdir}/${workflow.start.format('yyyy-MM-dd_HH-mm-ss')}_${params.launch_name}/ON_TARGET_RATIO"
 //    debug true
-//    errorStrategy 'ignore'
+    errorStrategy 'ignore'
 
     input:
     tuple val(sid), path(bam), path(bamIndex)
