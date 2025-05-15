@@ -6,3 +6,5 @@ null/
 params.yml
 path_config.py
 __pycache__
+tmp
+install.log
