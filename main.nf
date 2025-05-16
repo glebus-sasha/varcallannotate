@@ -36,8 +36,7 @@ workflow {
         bwaidx,
         faidx
     )
-    MOSDEPTH(ALIGN_VARCALL.out.align, '_exom', bed)
-    ON_TARGET_RATIO(ALIGN_VARCALL.out.align, MOSDEPTH.out.bed)
+    MOSDEPTH(ALIGN_VARCALL.out.align)
     VEP(
         ALIGN_VARCALL.out.vcf,
         vep_cache,
