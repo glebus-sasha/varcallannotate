@@ -47,7 +47,6 @@ workflow {
         mix(QC_TRIM.out.fastqc_before)             |
         mix(QC_TRIM.out.fastqc_after)              |
         mix(MOSDEPTH.out.global_dist.map{it[1]})   |
-        mix(MOSDEPTH.out.region_dist.map{it[1]})   |
         mix(MOSDEPTH.out.summary.map{it[1]})       |
         mix(ALIGN_VARCALL.out.flagstat)            |
         mix(ALIGN_VARCALL.out.bcfstats)            |
