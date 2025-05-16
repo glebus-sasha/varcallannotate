@@ -8,3 +8,5 @@ path_config.py
 __pycache__
 tmp
 install.log
+bin/
+resources/

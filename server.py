@@ -20,7 +20,6 @@ socketio = SocketIO(app)
 
 print(READS_FOLDER) 
 print(OUTPUT_FOLDER) 
-print(nextflow_path) 
 print(nextflow_command)
 
 # nextflow_service = 'nextflow.service'
@@ -399,7 +398,7 @@ def run_nextflow():
             current_command = nextflow_command + ['--launch_name', launch_name]
 
             # Запуск Nextflow
-            nextflow_process = subprocess.Popen(current_command, cwd=nextflow_path, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+            nextflow_process = subprocess.Popen(current_command, cwd=os.path.dirname(os.path.abspath(__file__)), stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 
             # Отправляем статус "Nextflow запущен" в консоль
             socketio.emit('console_output', {'output': 'Nextflow запущен'})
