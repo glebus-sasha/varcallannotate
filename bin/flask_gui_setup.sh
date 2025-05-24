@@ -27,7 +27,7 @@ mkdir -p "$WORK_DIR/tmp_output"
 cat > "./path_config.py" <<EOF
 READS_FOLDER    = "$WORK_DIR/tmp_reads"
 OUTPUT_FOLDER   = "$WORK_DIR/tmp_output"
-REFERENCE_FOLDER = "$REF_DIR/hg38"
+REFERENCE = "$REF_DIR/hg38.fa"
 FAIDX_FOLDER    = "$REF_DIR/faidx"
 BWAIDX_FOLDER   = "$REF_DIR/bwaidx"
 VEP_CACHE_DIR   = "$VEP_CACHE_DIR"
@@ -38,7 +38,7 @@ nextflow_command = ["nextflow", "run",
     ".", "-profile", "apptainer",
     "--reads", READS_FOLDER,
     "--outdir", OUTPUT_FOLDER,
-    "--reference", REFERENCE_FOLDER,
+    "--reference", REFERENCE,
     "--faidx", FAIDX_FOLDER,
     "--bwaidx", BWAIDX_FOLDER,
     "--vep_cache", VEP_CACHE_DIR,

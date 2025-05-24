@@ -142,7 +142,6 @@ download_reference() {
 
   (curl -s -O "$BASE_URL/Homo_sapiens_assembly38.fasta" && echo "✅ Homo_sapiens_assembly38.fasta скачан") &
   (curl -s -O "$BASE_URL/Homo_sapiens_assembly38.fasta.fai" && echo "✅ Homo_sapiens_assembly38.fasta.fai скачан") &
-  (curl -s -O "$BASE_URL/Homo_sapiens_assembly38.dict" && echo "✅ Homo_sapiens_assembly38.dict скачан") &
 
   echo "📥 Скачиваем индексы BWA..."
   for ext in amb ann bwt pac sa; do
@@ -157,7 +156,6 @@ download_reference() {
 
   mv Homo_sapiens_assembly38.fasta "$REF_DIR/hg38.fa"
   mv Homo_sapiens_assembly38.fasta.fai "$REF_DIR/faidx/hg38.fa.fai"
-  mv Homo_sapiens_assembly38.dict "$REF_DIR/faidx/hg38.dict"
 
   for ext in amb ann bwt pac sa; do
     mv "Homo_sapiens_assembly38.fasta.64.$ext" "$REF_DIR/bwaidx/hg38.fa.$ext"
